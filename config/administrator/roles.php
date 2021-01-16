@@ -3,8 +3,8 @@
 use Spatie\Permission\Models\Role;
 
 return [
-    'title'   => '角色',
-    'single'  => '角色',
+    'title'   => 'Roles',
+    'single'  => 'Role',
     'model'   => Role::class,
 
     'permission'=> function()
@@ -17,10 +17,10 @@ return [
             'title' => 'ID',
         ],
         'name' => [
-            'title' => '标识'
+            'title' => 'Tags'
         ],
         'permissions' => [
-            'title'  => '权限',
+            'title'  => 'Permissions',
             'output' => function ($value, $model) {
                 $model->load('permissions');
                 $result = [];
@@ -33,7 +33,7 @@ return [
             'sortable' => false,
         ],
         'operation' => [
-            'title'  => '管理',
+            'title'  => 'Operations',
             'output' => function ($value, $model) {
                 return $value;
             },
@@ -43,11 +43,11 @@ return [
 
     'edit_fields' => [
         'name' => [
-            'title' => '标识',
+            'title' => 'Tag',
         ],
         'permissions' => [
             'type' => 'relationship',
-            'title' => '权限',
+            'title' => 'Permission',
             'name_field' => 'name',
         ],
     ],
@@ -57,7 +57,7 @@ return [
             'title' => 'ID',
         ],
         'name' => [
-            'title' => '标识',
+            'title' => 'Tag',
         ]
     ],
 
@@ -68,7 +68,7 @@ return [
 
     // 表单验证错误时定制错误消息
     'messages' => [
-        'name.required' => '标识不能为空',
-        'name.unique' => '标识已存在',
+        'name.required' => 'Tag cannot be null',
+        'name.unique' => 'Tag has existed',
     ]
 ];

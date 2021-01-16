@@ -3,8 +3,8 @@
 use App\Models\Category;
 
 return [
-    'title'   => '分类',
-    'single'  => '分类',
+    'title'   => 'Categories',
+    'single'  => 'Category',
     'model'   => Category::class,
 
     // 对 CRUD 动作的单独权限控制，其他动作不指定默认为通过
@@ -21,36 +21,36 @@ return [
             'title' => 'ID',
         ],
         'name' => [
-            'title'    => '名称',
+            'title'    => 'Name',
             'sortable' => false,
         ],
         'description' => [
-            'title'    => '描述',
+            'title'    => 'Description',
             'sortable' => false,
         ],
         'operation' => [
-            'title'  => '管理',
+            'title'  => 'Operations',
             'sortable' => false,
         ],
     ],
     'edit_fields' => [
         'name' => [
-            'title' => '名称',
+            'title' => 'Name',
         ],
         'description' => [
-            'title' => '描述',
+            'title' => 'Description',
             'type'  => 'textarea',
         ],
     ],
     'filters' => [
         'id' => [
-            'title' => '分类 ID',
+            'title' => 'Category ID',
         ],
         'name' => [
-            'title' => '名称',
+            'title' => 'Name',
         ],
         'description' => [
-            'title' => '描述',
+            'title' => 'Description',
         ],
     ],
     'rules'   => [

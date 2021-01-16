@@ -3,8 +3,8 @@
 use App\Models\Topic;
 
 return [
-    'title'   => '话题',
-    'single'  => '话题',
+    'title'   => 'Topics',
+    'single'  => 'Topic',
     'model'   => Topic::class,
 
     'columns' => [
@@ -13,14 +13,14 @@ return [
             'title' => 'ID',
         ],
         'title' => [
-            'title'    => '话题',
+            'title'    => 'Topic',
             'sortable' => false,
             'output'   => function ($value, $model) {
                 return '<div style="max-width:260px">' . model_link($value, $model) . '</div>';
             },
         ],
         'user' => [
-            'title'    => '作者',
+            'title'    => 'Creator',
             'sortable' => false,
             'output'   => function ($value, $model) {
                 $avatar = $model->user->avatar;
@@ -29,26 +29,26 @@ return [
             },
         ],
         'category' => [
-            'title'    => '分类',
+            'title'    => 'Category',
             'sortable' => false,
             'output'   => function ($value, $model) {
                 return model_admin_link($model->category->name, $model->category);
             },
         ],
         'reply_count' => [
-            'title'    => '评论',
+            'title'    => 'Replies',
         ],
         'operation' => [
-            'title'  => '管理',
+            'title'  => 'Operations',
             'sortable' => false,
         ],
     ],
     'edit_fields' => [
         'title' => [
-            'title'    => '标题',
+            'title'    => 'Title',
         ],
         'user' => [
-            'title'              => '用户',
+            'title'              => 'Creator',
             'type'               => 'relationship',
             'name_field'         => 'name',
 
@@ -63,25 +63,25 @@ return [
             'options_sort_field' => 'id',
         ],
         'category' => [
-            'title'              => '分类',
+            'title'              => 'Category',
             'type'               => 'relationship',
             'name_field'         => 'name',
             'search_fields'      => ["CONCAT(id, ' ', name)"],
             'options_sort_field' => 'id',
         ],
         'reply_count' => [
-            'title'    => '评论',
+            'title'    => 'Replied Times',
         ],
         'view_count' => [
-            'title'    => '查看',
+            'title'    => 'Viewed Times',
         ],
     ],
     'filters' => [
         'id' => [
-            'title' => '内容 ID',
+            'title' => 'Topic ID',
         ],
         'user' => [
-            'title'              => '用户',
+            'title'              => 'Creator',
             'type'               => 'relationship',
             'name_field'         => 'name',
             'autocomplete'       => true,
@@ -89,7 +89,7 @@ return [
             'options_sort_field' => 'id',
         ],
         'category' => [
-            'title'              => '分类',
+            'title'              => 'Category',
             'type'               => 'relationship',
             'name_field'         => 'name',
             'search_fields'      => array("CONCAT(id, ' ', name)"),
@@ -100,6 +100,6 @@ return [
         'title' => 'required'
     ],
     'messages' => [
-        'title.required' => '请填写标题',
+        'title.required' => 'Please type title',
     ],
 ];

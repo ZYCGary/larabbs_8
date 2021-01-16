@@ -4,10 +4,10 @@ use App\Models\User;
 
 return [
     // 页面标题
-    'title'   => '用户',
+    'title'   => 'Users',
 
     // 模型单数，用作页面『新建 $single』
-    'single'  => '用户',
+    'single'  => 'User',
 
     // 数据模型，用作数据的 CRUD
     'model'   => User::class,
@@ -28,7 +28,7 @@ return [
 
         'avatar' => [
             // 数据表格里列的名称，默认会使用『列标识』
-            'title'  => '头像',
+            'title'  => 'Avatar',
 
             // 默认情况下会直接输出数据，你也可以使用 output 选项来定制输出内容
             'output' => function ($avatar, $model) {
@@ -40,7 +40,7 @@ return [
         ],
 
         'name' => [
-            'title'    => '用户名',
+            'title'    => 'Username',
             'sortable' => false,
             'output' => function ($name, $model) {
                 return '<a href="/users/'.$model->id.'" target=_blank>'.$name.'</a>';
@@ -48,11 +48,11 @@ return [
         ],
 
         'email' => [
-            'title' => '邮箱',
+            'title' => 'Email',
         ],
 
         'operation' => [
-            'title'  => '管理',
+            'title'  => 'Operation',
             'sortable' => false,
         ],
     ],
@@ -60,18 +60,18 @@ return [
     // 『模型表单』设置项
     'edit_fields' => [
         'name' => [
-            'title' => '用户名',
+            'title' => 'Username',
         ],
         'email' => [
-            'title' => '邮箱',
+            'title' => 'Email',
         ],
         'password' => [
-            'title' => '密码',
+            'title' => 'Password',
             // 表单使用 input 类型 password
             'type' => 'password',
         ],
         'avatar' => [
-            'title' => '用户头像',
+            'title' => 'Avatar',
 
             // 设置表单条目的类型，默认的 type 是 input
             'type' => 'image',
@@ -80,7 +80,7 @@ return [
             'location' => public_path() . '/uploads/images/avatars/',
         ],
         'roles' => [
-            'title'      => '用户角色',
+            'title'      => 'Role',
 
             // 指定数据的类型为关联模型
             'type'       => 'relationship',
@@ -95,13 +95,13 @@ return [
         'id' => [
 
             // 过滤表单条目显示名称
-            'title' => '用户 ID',
+            'title' => 'User ID',
         ],
         'name' => [
-            'title' => '用户名',
+            'title' => 'Username',
         ],
         'email' => [
-            'title' => '邮箱',
+            'title' => 'Email',
         ],
     ],
 ];

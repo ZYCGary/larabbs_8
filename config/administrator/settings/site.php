@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title' => '站点设置',
+    'title' => 'Sit Settings',
 
     // 访问权限判断
     'permission'=> function()
@@ -14,7 +14,7 @@ return [
     'edit_fields' => [
         'site_name' => [
             // 表单标题
-            'title' => '站点名称',
+            'title' => 'Site Name',
 
             // 表单条目类型
             'type' => 'text',
@@ -23,7 +23,7 @@ return [
             'limit' => 50,
         ],
         'contact_email' => [
-            'title' => '联系人邮箱',
+            'title' => 'Contact Email',
             'type' => 'text',
             'limit' => 50,
         ],
@@ -46,8 +46,8 @@ return [
     ],
 
     'messages' => [
-        'site_name.required' => '请填写站点名称。',
-        'contact_email.email' => '请填写正确的联系人邮箱格式。',
+        'site_name.required' => 'Please type the site name.',
+        'contact_email.email' => 'Please type an email in the correct format.',
     ],
 
     // 数据即将保存时触发的钩子，可以对用户提交的数据做修改
@@ -64,13 +64,13 @@ return [
 
         // 清空缓存
         'clear_cache' => [
-            'title' => '更新系统缓存',
+            'title' => 'Clear system cache',
 
             // 不同状态时页面的提醒
             'messages' => [
-                'active' => '正在清空缓存...',
-                'success' => '缓存已清空！',
-                'error' => '清空缓存时出错！',
+                'active' => 'Cleaning cache...',
+                'success' => 'Cache is cleaned!',
+                'error' => 'Errors happen when cleaning',
             ],
 
             // 动作执行代码，注意你可以通过修改 $data 参数更改配置信息
